@@ -1,0 +1,79 @@
+package main
+
+import "fmt"
+
+/*Given an array arr, replace every element in that
+array with the greatest element among the elements to its
+right, and replace the last element with -1.
+After doing so, return the array.
+input: [17,18,5,4,6,1]
+output: [18,6,6,6,1,-1]
+ */
+
+
+
+func main()  {
+	arr:= []int{17,18,5,4,6,1}
+	for i:= range arr {
+		if arr[i+1]==6{
+			Res:=append(arr,-1)
+			fmt.Print(Res)
+			break
+		}
+			if arr[i] < arr[i+1] {
+				arr[i] = arr[i+1]
+			}
+
+		}
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//this is not worked
+
+
+/*	max:=numbers[0]
+	fmt.Println(numbers)
+	fmt.Println(arr)
+	fmt.Println(len(numbers))
+	for i:=0;i<=len(numbers)+1;i++{
+		if numbers[i+1]!=len(numbers) {
+			if numbers[i] < numbers[i+1] {
+				max = numbers[i+1]
+			} else {
+				max = numbers[i]
+			}
+			fmt.Println(max)
+
+		}
+		for i := 1; i < len(numbers); i++ {
+
+			if max < numbers[i] {
+
+				max = numbers[i]
+			}
+		}
+
+	}
+
+		fmt.Printf("\nMax element is : %d", max)
+	}*/
